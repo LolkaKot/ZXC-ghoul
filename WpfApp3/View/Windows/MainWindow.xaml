@@ -1,0 +1,130 @@
+﻿<Window x:Class="WpfApp3.MainWindow"
+            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:system="clr-namespace:System;assembly=mscorlib"
+        xmlns:local="clr-namespace:WpfApp3"
+        mc:Ignorable="d"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        AllowsTransparency="True"
+        Background="Transparent"
+        Title="MainWindow" Height="450" Width="800">
+
+    <Grid Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <materialDesign:DrawerHost Grid.ColumnSpan="2"
+  x:Name="DrawerHost"
+  Width="800"
+  Height="454"
+  HorizontalAlignment="Center"
+  VerticalAlignment="Center"
+  BorderBrush="{DynamicResource MaterialDesignDivider}"
+  BorderThickness="2"
+  BottomDrawerBackground="{DynamicResource SecondaryHueLightBrush}"
+  BottomDrawerCornerRadius="20 20 0 0">
+            
+            <materialDesign:DrawerHost.Style >
+                <Style
+      TargetType="materialDesign:DrawerHost"
+      BasedOn="{StaticResource {x:Type materialDesign:DrawerHost}}">
+                    <Style.Triggers>
+                        <DataTrigger
+          Binding="{Binding IsChecked, ElementName=BackgroundToggle}"
+          Value="True">
+                            <Setter
+            Property="OverlayBackground"
+            Value="{DynamicResource PrimaryHueMidBrush}" />
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </materialDesign:DrawerHost.Style>
+            <materialDesign:DrawerHost.LeftDrawerContent>
+                <Grid Margin="16"  Cursor="">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Margin="4" HorizontalAlignment="Center" Text="ㅤㅤㅤㅤㅤㅤ" Grid.ColumnSpan="2"/>
+                    <Button Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center" Click="Button_Click" VerticalAlignment="Center" Content="1" Width="50" Margin="4" Background="#524D8C" Foreground="#A29BE9" BorderBrush="#A29BE9"/>
+                    <Button Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" Click="Button_Click_1" VerticalAlignment="Center" Content="2" Width="50" Margin="4" Background="#524D8C" Foreground="#A29BE9" BorderBrush="#A29BE9"/>
+                    <Button Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" Click="Button_Click_3"  VerticalAlignment="Center" Content="3" Width="50" Margin="4" Background="#524D8C" Foreground="#A29BE9" BorderBrush="#A29BE9"/>
+                    <Button Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" Click="Button_Click_4" VerticalAlignment="Center" Content="4" Width="50" Margin="4" Background="#524D8C" Foreground="#A29BE9" BorderBrush="#A29BE9"/>
+                    <Button Grid.Column="0" Grid.Row="2" HorizontalAlignment="Center" Click="Button_Click_5" VerticalAlignment="Center" Content="5" Width="50" Margin="4" Background="#524D8C" Foreground="#A29BE9" BorderBrush="#A29BE9"/>
+                    <Button Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" Click="Button_Click_6" VerticalAlignment="Center" Content="6" Width="50" Margin="4" Background="#524D8C" Foreground="#A29BE9" BorderBrush="#A29BE9"/>
+                    <Button Grid.Column="0" Grid.Row="3" HorizontalAlignment="Center" Click="Button_Click_7" VerticalAlignment="Center" Content="7" Width="50" Margin="4" Background="#524D8C" Foreground="#A29BE9" BorderBrush="#A29BE9"/>
+                    <Button Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center" Click="Button_Click_8" VerticalAlignment="Center" Content="8" Width="50" Margin="4" Background="#524D8C" Foreground="#A29BE9" BorderBrush="#A29BE9"/>
+                    <Button Grid.Column="0" Grid.Row="4" HorizontalAlignment="Center" Click="Button_Click_9" VerticalAlignment="Center" Content="9" Width="50" Margin="4" Background="#524D8C" Foreground="#A29BE9" BorderBrush="#A29BE9"/>
+                    <Button Grid.Column="1" Grid.Row="4" HorizontalAlignment="Center" Click="Button_Click_10" VerticalAlignment="Center" Content="10" Width="50" Margin="4" Background="#524D8C" Foreground="#A29BE9" BorderBrush="#A29BE9"/>
+                    <Button Grid.Column="0" Grid.Row="5" HorizontalAlignment="Center" Click="Button_Click_11" VerticalAlignment="Center" Content="11" Width="50" Margin="4" Background="#524D8C" Foreground="#A29BE9" BorderBrush="#A29BE9"/>
+                    <Button Grid.Column="1" Grid.Row="5" HorizontalAlignment="Center" Click="Button_Click_12" VerticalAlignment="Center" Content="12" Width="50" Margin="4" Background="#524D8C" Foreground="#A29BE9" BorderBrush="#A29BE9"/>
+                    <Button Grid.Column="0" Grid.Row="6" HorizontalAlignment="Center" Click="Button_Click_13" VerticalAlignment="Center" Content="13" Width="50" Margin="4" Background="#524D8C" Foreground="#A29BE9" BorderBrush="#A29BE9"/>
+                    <Button Grid.Column="1" Grid.Row="6" HorizontalAlignment="Center" Click="Button_Click_14" VerticalAlignment="Center" Content="14" Width="50" Margin="4" Background="#524D8C" Foreground="#A29BE9" BorderBrush="#A29BE9"/>
+                    <Button Grid.Column="0" Grid.Row="7" HorizontalAlignment="Center" Click="Button_Click_15" VerticalAlignment="Center" Content="15" Width="50" Margin="4" Background="#524D8C" Foreground="#A29BE9" BorderBrush="#A29BE9"/>
+                    <Button Grid.Column="1" Grid.Row="7" HorizontalAlignment="Center" Click="Button_Click_16" VerticalAlignment="Center" Content="16" Width="50" Margin="4" Background="#524D8C" Foreground="#A29BE9" BorderBrush="#A29BE9"/>
+                    <Button Grid.Column="0" Grid.Row="8" HorizontalAlignment="Center" Click="Button_Click_17" VerticalAlignment="Center" Content="17" Width="50" Margin="4" Background="#524D8C" Foreground="#A29BE9" BorderBrush="#A29BE9"/>
+                    <Button Grid.Column="1" Grid.Row="8" HorizontalAlignment="Center" Click="Button_Click_18" VerticalAlignment="Center" Content="18" Width="50" Margin="4" Background="#524D8C" Foreground="#A29BE9" BorderBrush="#A29BE9"/>
+                    <Button Grid.Column="0" Grid.Row="9" HorizontalAlignment="Center" Click="Button_Click_19" VerticalAlignment="Center" Content="19" Width="50" Margin="4" Background="#524D8C" Foreground="#A29BE9" BorderBrush="#A29BE9"/>
+                    <Button Grid.Column="1" Grid.Row="9" HorizontalAlignment="Center" Click="Button_Click_20" VerticalAlignment="Center" Content="20" Width="50" Margin="4" Background="#524D8C" Foreground="#A29BE9" BorderBrush="#A29BE9"/>
+                    <Button Grid.Column="0" Grid.Row="10" HorizontalAlignment="Center" Click="Button_Click_21" VerticalAlignment="Center" Content="21" Width="50" Margin="4" Background="#524D8C" Foreground="#A29BE9" BorderBrush="#A29BE9"/>
+                    <Button Grid.Column="1" Grid.Row="10" HorizontalAlignment="Center" Click="Button_Click_22" VerticalAlignment="Center" Content="22" Width="50" Margin="4" Background="#524D8C" Foreground="#A29BE9" BorderBrush="#A29BE9"/>
+                    <Button Grid.Column="0" Grid.Row="11" HorizontalAlignment="Center" Click="Button_Click_23" VerticalAlignment="Center" Content="23" Width="50" Margin="4" Background="#524D8C" Foreground="#A29BE9" BorderBrush="#A29BE9"/>
+                    <Button Grid.Column="1" Grid.Row="11" HorizontalAlignment="Center" Click="Button_Click_24" VerticalAlignment="Center" Content="24" Width="50" Margin="4" Background="#524D8C" Foreground="#A29BE9" BorderBrush="#A29BE9"/>
+                    <Button Grid.Column="0" Grid.Row="12" HorizontalAlignment="Center" Click="Button_Click_25" VerticalAlignment="Center" Content="25" Width="50" Margin="4" Background="#524D8C" Foreground="#A29BE9" BorderBrush="#A29BE9"/>
+                    <Button Grid.Column="1" Grid.Row="12" HorizontalAlignment="Center" Click="Button_Click_26" VerticalAlignment="Center" Content="26" Width="50" Margin="4" Background="#524D8C" Foreground="#A29BE9" BorderBrush="#A29BE9"/>
+                    <Button Grid.Column="0" Grid.Row="13" HorizontalAlignment="Center" Click="Button_Click_27" VerticalAlignment="Center" Content="27" Width="50" Margin="4" Background="#524D8C" Foreground="#A29BE9" BorderBrush="#A29BE9"/>
+                    <Button Grid.Column="1" Grid.Row="13" HorizontalAlignment="Center" Click="Button_Click_28" VerticalAlignment="Center" Content="28" Width="50" Margin="4" Background="#524D8C" Foreground="#A29BE9" BorderBrush="#A29BE9"/>
+                    <Button Grid.Column="0" Grid.Row="14" HorizontalAlignment="Center" Click="Button_Click_29" VerticalAlignment="Center" Content="29" Width="50" Margin="4" Background="#524D8C" Foreground="#A29BE9" BorderBrush="#A29BE9"/>
+                    <Button Grid.Column="1" Grid.Row="14" HorizontalAlignment="Center" Click="Button_Click_30" VerticalAlignment="Center" Content="30" Width="50" Margin="4" Background="#524D8C" Foreground="#A29BE9" BorderBrush="#A29BE9"/>
+
+
+
+                </Grid>
+            </materialDesign:DrawerHost.LeftDrawerContent>
+
+            <Grid
+    HorizontalAlignment="Center"
+    VerticalAlignment="Center">
+
+                <Button
+                    Foreground="#A29BE9"
+                    BorderBrush="#A29BE9"
+                    Background="#524D8C"
+                    
+      Grid.Column="0"
+      Margin="-360,200,368,-192"
+      Command="{x:Static materialDesign:DrawerHost.OpenDrawerCommand}"
+      CommandParameter="{x:Static Dock.Left}"
+      Content="{materialDesign:PackIcon Kind=ArrowLeft}" />
+
+
+
+
+            </Grid>
+        </materialDesign:DrawerHost>
+        <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden" Grid.Column="1"/>
+    </Grid>
+</Window>

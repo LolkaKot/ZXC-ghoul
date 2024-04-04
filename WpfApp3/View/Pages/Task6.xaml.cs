@@ -1,0 +1,50 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+
+namespace WpfApp3.View.Pages
+{
+    /// <summary>
+    /// Логика взаимодействия для Task6.xaml
+    /// </summary>
+    public partial class Task6 : Page
+    {
+        public Task6()
+        {
+            InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Random random = new Random();
+            int n = random.Next(1, 100);
+
+            int minK = -1;
+            int min3K = int.MaxValue;
+
+            for (int i = 1; i <= n; i++)
+            {
+                int candidate3K = 3 * i;
+                if (candidate3K > n && candidate3K < min3K)
+                {
+                    minK = i;
+                    min3K = candidate3K;
+                }
+            }
+
+            MessageBox.Show("минимальный K: " + minK);
+            MessageBox.Show("соответствующий 3K: " + min3K);
+        }
+    }
+}

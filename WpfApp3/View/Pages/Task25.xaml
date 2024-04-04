@@ -1,0 +1,36 @@
+﻿<Page x:Class="WpfApp3.View.Pages.Task25"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp3.View.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Task25">
+
+    <Grid>
+        <Grid.Background>
+            <SolidColorBrush Color="Black"/>
+        </Grid.Background>
+        <Grid>
+            <Grid.Triggers>
+                <EventTrigger RoutedEvent="Loaded">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation
+                         Storyboard.TargetProperty="Opacity"
+                         From="1" To="0" Duration="0:0:2"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Grid.Triggers>
+            <Polygon Points="150,0 200,100 300,100 220,180 250,300 150,220 50,300 80,180 0,100 100,100" Fill="#E6DF9A" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Grid>
+        <Grid>
+            <StackPanel HorizontalAlignment="Center">
+                <TextBlock Foreground="White" Margin="10" FontSize="12">Задано натуральные числа от 10 до N. Для натурального числа найти первую цифру и сумму его цифр</TextBlock>
+            </StackPanel>
+            <Button Margin="210" Click="Button_Click" FontSize="17" Background="White" BorderBrush="Black" Foreground="Black" Cursor="Hand">результат</Button>
+        </Grid>
+    </Grid>
+</Page>
